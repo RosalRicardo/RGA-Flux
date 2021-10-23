@@ -44,7 +44,7 @@ function train_dscr!(discriminator, real_data, fake_data)
     all_data = hcat(real_data, fake_data)
 
     # Vetor de destino para previsões: 1 para dados reais, 0 para dados falsos.
-    all_target = [ones(eltype(real_data), 1, this_batch) zeros(eltype(fake_data), 1, this_batch)] |> gpu;
+    all_target = [ones(eltype(real_data), 1, this_batch) zeros(eltype(fake_data), 1, this_batch)];# |> gpu;
 
     ps = Flux.params(discriminator)
     loss, pullback = Zygote.pullback(ps) do
@@ -63,7 +63,7 @@ end
 #Função de treinamento do gerador
 function train_gen!(discriminator, generator)
     # Vetor de ruido do espaço latente
-    noise = randn(latent_dim, batch_size) |> gpu;
+    noise = randn(latent_dim, batch_size)# |> gpu;
 
     # Defina os parâmetros e obtenha o retorno
     ps = Flux.params(generator)
@@ -91,7 +91,7 @@ for n in 1:num_epochs
         real_data = flatten(x);
 
         # Treina o discriminador
-        noise = randn(latent_dim, size(x)[end]) |> gpu
+        noise = randn(latent_dim, size(x)[end])# |> gpu
         fake_data = generator(noise)
         loss_dscr = train_dscr!(discriminator, real_data, fake_data)
         loss_sum_dscr += loss_dscr
@@ -107,7 +107,7 @@ for n in 1:num_epochs
 
     if n % output_period == 0
         @show n
-        noise = randn(latent_dim, 4) |> gpu;
+        noise = randn(latent_dim, 4);# |> gpu;
         fake_data = reshape(generator(noise), 28, 4*28);
         p = heatmap(fake_data, colormap=:inferno)
         print(p)
