@@ -6,8 +6,8 @@ UnicodePlots = "b8865327-cd53-5732-bb35-84acbb429228"
 CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
 
 [compat]
-Flux = "0.12.7"
-MLDatasets = "0.5.11"
-Zygote = "0.6.21"
-UnicodePlots = "2.4.6"
-CUDA = "3.5.0"
+Flux = "0.12"
+MLDatasets = "0.5"
+Zygote = "0.6"
+UnicodePlots = "2.4"
+CUDA = "3"
