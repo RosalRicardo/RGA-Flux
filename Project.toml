@@ -1,13 +1,13 @@
 [deps]
-CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
 Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
 MLDatasets = "eb30cadb-4394-5ae3-aed4-317e484a6458"
-UnicodePlots = "b8865327-cd53-5732-bb35-84acbb429228"
 Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
+UnicodePlots = "b8865327-cd53-5732-bb35-84acbb429228"
+CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
 
 [compat]
-CUDA = "3.5.0"
 Flux = "0.12.7"
 MLDatasets = "0.5.11"
-UnicodePlots = "2.4.6"
 Zygote = "0.6.21"
+UnicodePlots = "2.4.6"
+CUDA = "3.5.0"
