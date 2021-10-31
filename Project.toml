@@ -4,6 +4,8 @@ MLDatasets = "eb30cadb-4394-5ae3-aed4-317e484a6458"
 Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
 UnicodePlots = "b8865327-cd53-5732-bb35-84acbb429228"
 CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
+ 
 
 [compat]
 Flux = "0.12"
@@ -11,3 +13,4 @@ MLDatasets = "0.5"
 Zygote = "0.6"
 UnicodePlots = "2.4"
 CUDA = "3"
+Images = "0.24"
